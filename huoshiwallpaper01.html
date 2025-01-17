@@ -3,6 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, initial-scale=1, maximum-scale=1">
+    <meta name="description" content="火狮HUOSHI壁纸">
+    <meta name="keywords" content="火狮壁纸，火狮动漫动态壁纸 ">
+    <meta name="author" content="火狮HUOSHI">
+
     <link rel="icon" type="image/x-icon" href="https://github.com/huoshi111/huoshiicon/blob/main/%E7%81%AB%E7%8B%AEHuoShi%20logo.png?raw=true">
     <title>视频壁纸</title>
     <style>
@@ -64,19 +68,22 @@
 
         header .menu button {
             background: linear-gradient(145deg, #28282899, #333333a4);
-            border: none;
+            box-shadow: inset 0 0 10px rgba(255, 255, 255, 0.26); /* 内部阴影 */
             padding: 10px 15px;
-            color: #ffffff;
+            color: #f3f3f3;
             font-size: 14px;
             cursor: pointer;
-            border-radius: 5px;
+            border-radius: 10px;
             transition: all 0.3s ease;
         }
 
         header .menu button:hover {
             background: linear-gradient(145deg, #555555bb, #3737377d);
             transform: scale(1.05);
+            color: #fffffff3; /* 鼠标悬停时文字颜色变白 */
+            box-shadow: 0 6px 20px rgba(235, 235, 235, 0.458); /* 加强阴影 */
         }
+
 
         header .search input {
             flex-grow: 1;
@@ -85,13 +92,14 @@
             border-radius: 5px;
             outline: none;
             color: #fff;
-            background: #222;
+            background: #141414aa;
             font-size: 14px;
         }
 
+
         header .search button {
-            background: #444;
-            border: none;
+            background: #1f1f1f8a;
+            border: 1px solid #d7d7d758; /* 添加科技感边框 */
             padding: 10px 15px;
             color: #fff;
             font-size: 14px;
@@ -100,7 +108,8 @@
         }
 
         header .search button:hover {
-            background: #5555558b;
+            background: #3e3e3e6a;
+            box-shadow: inset 0 0 10px rgba(255, 255, 255, 0.127); /* 内部阴影 */
         }
 
         header .search .suggestions {
@@ -243,65 +252,11 @@
                display: none !important;
         }
 
-        #unique-question-button-id {
-            background-color: #111;
-            color: rgb(161, 161, 161);
-            border: none;
-            border-radius: 30%;
-            cursor: pointer;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-        }
-
-        #unique-modal-overlay-id {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.686);
-            display: none;
-            justify-content: center;
-            align-items: center;
-            z-index: 2000; /* 提高 z-index，确保在 header 之上 */
-        }
-
-        #unique-modal-id {
-            background-color: rgba(0, 0, 0, 0.79);
-            width: 90%;
-            max-width: 600px;
-            height: 70%;
-            border-radius: 10px;
-            padding: 20px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            overflow-y: auto;
-            position: relative;
-            scrollbar-width: none; /* 隐藏 Firefox 的滚动条（仅美观，无实际效果） */
-        }
-
-        #unique-modal-id h2 {
-            margin-top: 0;
-            color: rgba(197, 197, 197, 0.915);
-        }
-
-        #unique-close-button-id {
-            background-color: transparent;
-            color: rgb(182, 182, 182);
-            border: none;
-            font-size: 30px;
-            font-weight: bold;
-            cursor: pointer;
-            position: fixed;
-            top: 10px;
-            right: 10px;
-        }
 
 /* 初始隐藏状态 */
        .hidden {
             opacity: 0;
-            transform: translateY(14px); /* 下移 50px */
+            transform: translateY(7px); /* 下移 50px */
             transition: opacity 0.6s ease, transform 0.6s ease;
         }
 
@@ -310,70 +265,269 @@
             opacity: 1;
             transform: translateY(0);
         }
+        
+        /* 模态框背景 */
+        #unique-modal-overlay-id1 {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            display: none;
+            justify-content: center;
+            align-items: center;
+            z-index: 2000;
+        }
 
+        /* 模态框主体 */
+        #unique-modal-id1 {
+            background-color: #000000dd;
+            width: 90%;
+            max-width: 700px;
+            height: 70%;
+            border-radius: 10px;
+            padding: 0;
+            display: flex;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        /* 分类按钮（左侧菜单） */
+        .category-buttons1 {
+            background-color: #191919aa;
+            display: flex;
+            flex-direction: column;
+            width: 150px;
+            padding: 10px;
+            border-top-left-radius: 10px;
+            border-bottom-left-radius: 10px;
+        }
+
+        .category-buttons1 button {
+            background-color: #282828a5;
+            color: #bebebe;
+            border: none;
+            padding: 10px;
+            margin-bottom: 10px;
+            text-align: left;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+            transition: all 0.3s ease; /* 平滑过渡 */
+            transform-origin: center;
+            height: 40px;
+            width: 120px;
+        }
+
+        /* 悬停效果 */
+        .category-buttons1 button:hover {
+            background-color: #4747478c;
+            transform: scale(1.05); /* 放大 */
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+        }
+
+        /* 点击效果 */
+        .category-buttons1 button:active {
+            transform: scale(0.95); /* 点击时缩小 */
+        }
+
+        /* 激活状态 */
+        .category-buttons1 button.active {
+            background-color: #39393972;
+            color: #848484;
+            box-shadow: inset 0 0 10px rgba(255, 255, 255, 0.2); /* 内部阴影 */
+        }
+
+        /* 内容区域 */
+        .content-area1 {
+            flex-grow: 1;
+            padding: 20px;
+            overflow-y: auto;
+            scrollbar-width: none; /* 隐藏 Firefox 的滚动条（仅美观，无实际效果） */
+        }
+
+        .content-area1 .content1 {
+            display: none;
+        }
+
+        .content-area1 .content1.active {
+            display: block;
+        }
+
+        /* 关闭按钮 */
+        #unique-close-button-id1 {
+            background-color: transparent;
+            color: #fff;
+            border: none;
+            font-size: 24px;
+            font-weight: bold;
+            cursor: pointer;
+            position: absolute;
+            top: 10px;
+            right: 10px;
+        }
+
+        /* 打开模态框的按钮 */
+        #unique-question-button-id1 {
+            background-color: #00000092;
+            color: rgb(161, 161, 161);
+            border: 1px solid #d7d7d758; /* 添加科技感边框 */
+            border-radius: 30%;
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+        }
+
+        #unique-question-button-id1:hover {
+            box-shadow: 0 4px 15px rgba(103, 103, 103, 0.619);
+            background-color: #666;
+            transform: scale(1.1);
+        }
+
+        #unique-question-button-id1:active {
+            transform: scale(0.9);
+        }
 
 
     </style>
 </head>
 <body>
     
+    <div id="unique-modal-overlay-id1">
+        <div id="unique-modal-id1">
+            <div class="category-buttons1">
+                <button class="category-btn1 active" data-target="content11">壁纸介绍</button>
+                <button class="category-btn1" data-target="content21">安全说明</button>
+                <button class="category-btn1" data-target="content31">设置壁纸</button>
+                <button class="category-btn1" data-target="content41">在线动漫</button>
+            </div>
+            <div class="content-area1">
+                <button id="unique-close-button-id1">&times;</button>
+<!--壁纸网站介绍-->
+                <div id="content11" class="content1 active">
+                    <p style="color: #b6b6b6;">提示: 本网站在国内可能会出现无法加载的情况，因为外网可能在国内受限制网速可能变慢，但是一般是能够正常打开和保存壁纸的。</p>
+                    <br><br>
+                    <h2 style="color: #e2e2e2cb;">火狮 壁纸网站 介绍</h2>
+                    <b style="color: #c1c1c1cb;">提示：如果按下下载按钮后没有出现下载的情况，可以使用另一种方法，长按一下你要下载的动态壁纸或图片壁纸会显示下载选项浏览器提供的下载功能。</b>
+                    <hr style="border: 1px solid rgb(78, 78, 78);">
+                    <br><br>
+                    <p style="color: #9f9f9fcb;">在这里你可以免费下载任何动漫壁纸，全部高清，拥有动态壁纸，壁纸图，手机壁纸，电脑壁纸和头像。</p>
+                    <p style="color: #9f9f9fcb;">在这里无需担心什么广告什么的，本网站全面禁止广告和不良内容，您可以放心下载您想要的壁纸。</p>
+                    <br>
+                    <center>
+                        <br><br><br><br>
+                        <b style="color: #dfdfdfc6;"> 火狮 HUOSHI 动漫壁纸网站 © 2025 ---<a style="color: #14e3d5;" href="https://www.douyin.com/user/MS4wLjABAAAACijCHXWkdAit63xNKQJqV1v_SikFaSv361RJzIktzAX15pBKLOT65qZe7-A-wpHX?from_tab_name=main"> "抖音"</a> 本网站支持免费和无广告安全下载高清动漫壁纸。</b> 
+                    </center>
+                </div>
+<!--安全说明-->
+                <div id="content21" class="content1">
+                    <br><br>
+                    <p style="color: #b6b6b6;">提示: 本网站在国内可能会出现无法加载的情况，因为外网可能在国内受限制网速可能变慢，但是一般是能够正常打开和保存壁纸的。</p>
+                    <br>
+        
+                    <hr style="border: 1px solid rgb(78, 78, 78);">
+                    <h2>下载的安全性与保障 请放心</h2>
+                    <br>
+        
+                    <hr style="border: 1px solid rgb(78, 78, 78);">
+        
+                    <img src="https://raw.githubusercontent.com/huoshi111/huoshianquanprotect/refs/heads/main/b31461a351624393a654ea7f4c708abe.png" width="160px"; height="160px">
+                    </center>
+                    <p style="color: #b6b6b6;">- 关于网站下载视频壁纸和壁纸图的安全性说明；</p>
+                    <p style="color: #b6b6b6;">1. HTTPS 安全协议: <br>所有下载操作均通过 HTTPS 加密传输，确保文件在传输过程中不被窃听或篡改。</p>
+                    <p style="color: #b6b6b6;">2. 文件来源可信:<br> 我们上传的所有视频文件均经过严格筛选和验证，确保无病毒、无恶意代码，用户可以放心下载。</p>
+                    <p style="color: #b6b6b6;">3. 无第三方干扰:<br> 网站不依赖任何第三方插件或外部服务，避免因外部资源导致的安全隐患。</p>
+                    <p style="color: #b6b6b6;">4. 纯净无广告: <br> 平台保证无广告干扰，下载过程简洁高效，用户无需担心弹窗或恶意链接。</p>
+                    <p style="color: #b6b6b6;">5. 我们不会收集用户隐私信息，保护您的数据安全。</p>
+                    <p style="color: #b6b6b6;">6. 资源来自官方授权，无广告、无不良内容。</p>
+                    <p style="color: #b6b6b6;">7. 网站不会显示任何陌生内容，如果有问题会通知一下的。</p>
+                    <p style="color: #b6b6b6;">8. 如有任何疑问，请随时联系 火狮HUOSHI 在抖音网页版 搜索 <br><a style="color: #14e3d5;" href="https://www.douyin.com/user/MS4wLjABAAAACijCHXWkdAit63xNKQJqV1v_SikFaSv361RJzIktzAX15pBKLOT65qZe7-A-wpHX?from_tab_name=main"> "点击这里 火狮 HUOSHI"</a> 私信。</p>
+                    <br>
+                    <hr style="border: 1px solid rgb(78, 78, 78);">
+                    <p style="color: #b6b6b6;"><strong>如果还是不放心的话，请阅读以下说明；</strong><br> <br> 所有视频壁纸均托管在 GitHub Pages 平台，来源透明，支持用户查看上传记录。下载前后，可用杀毒软件或在线工具（如 VirusTotal，AntiVirus，360杀毒 等）扫描文件安全性。如有疑问，请在这里的 抖音 视频下留言，我们会及时回复！</p>
 
-    <div id="unique-modal-overlay-id">
-        <div id="unique-modal-id">
-            <button id="unique-close-button-id">&times;</button> 
-            <center>
-                <b style="color: #c1c1c1cb;">提示：如果按下下载按钮后没有出现下载的情况，可以使用另一种方法，长按一下你要下载的动态壁纸或图片壁纸会显示下载选项浏览器提供的下载功能。</b>
-                <br><br>
-                <hr style="border: 1px solid rgb(78, 78, 78);">
+                    <center>
+                        <br><br><br><br>
+                        <b style="color: #dfdfdfc6;"> 火狮 HUOSHI 动漫壁纸网站 © 2025 ---<a style="color: #14e3d5;" href="https://www.douyin.com/user/MS4wLjABAAAACijCHXWkdAit63xNKQJqV1v_SikFaSv361RJzIktzAX15pBKLOT65qZe7-A-wpHX?from_tab_name=main"> "抖音"</a> 本网站支持免费和无广告安全下载高清动漫壁纸。</b> 
+                    </center>
+                </div>
+<!--设置壁纸-->
+                <div id="content31" class="content1">
+                    <br><br>
+                    <p style="color: #b6b6b6;">提示: 本网站在国内可能会出现无法加载的情况，因为外网可能在国内受限制网速可能变慢，但是一般是能够正常打开和保存壁纸的。</p>
+                    <br>
+                    <br>
+                    <h2>如何将动态壁纸设置到桌面? 以下是不同设备如何设置动态壁纸教程:</h2>
+                    <br>
+                    <h3>1. Lively Wallpaper 电脑 免费软件</h3>
+                    <img src="https://store-images.s-microsoft.com/image/apps.4720.14416131676512756.84314783-1c86-4403-b991-2e1da8525703.bf78340f-7059-4641-8d3f-8a7f740be8c0" style="height: 50px; width: 50px; border-radius: 10px;">
+                    <p style="color: #b6b6b6;">- Lively Wallpaper 是电脑微软商店里 Microsoft Store 能够直接搜到的设置动态壁纸软件。</p>
+                    <br><br>
+        
+                    <hr style="border: 1px solid rgb(78, 78, 78);">
+        
+                    <h3>2. Wallpaper Engine 电脑 需要购买</h3>    
+                    <img src="https://www.wallpaperengine.io/assets/img/wpe/wallpaper_engine.gif" style="height: 50px; width: 50px; border-radius: 10px;">
+                    <p style="color: #b6b6b6;">- Wallpaper Engine 是一款功能强大的设置动态壁纸软件，可以在 <a style="color: #14e3d5;" href="https://store.steampowered.com/app/431960/Wallpaper_Engine/"> Steam </a>上购买获取或 <a style="color: #14e3d5;" href="https://www.wallpaperengine.io/zh-hans"> Wallpaper Engine 官网</a> 官网里获取。   </p>       
+                    <br><br>
+        
+                    <hr style="border: 1px solid rgb(78, 78, 78);">
+        
+                    <h3>3. 元气壁纸 电脑，平板或手机 免费软件</h3>    
+                    <img src="https://pp.myapp.com/ma_icon/0/icon_53897209_1732591160/256" style="height: 50px; width: 50px; border-radius: 10px;">
+                    <p style="color: #b6b6b6;">- 元气壁纸 是一款能够设置很多动态壁的软件，可以在 <a style="color: #14e3d5;" href="https://desk.duba.com/">  元气壁纸 </a> 官网上获取。 </p>       
+                    <br><br>
+                    <center>
+                    <br><br><br><br>
+                    <b style="color: #dfdfdfc6;"> 火狮 HUOSHI 动漫壁纸网站 © 2025 ---<a style="color: #14e3d5;" href="https://www.douyin.com/user/MS4wLjABAAAACijCHXWkdAit63xNKQJqV1v_SikFaSv361RJzIktzAX15pBKLOT65qZe7-A-wpHX?from_tab_name=main"> "抖音"</a> 本网站支持免费和无广告安全下载高清动漫壁纸。</b> 
+                    </center>
+                </div>
 
-                <br>
-            <h2>如何将动态壁纸设置到桌面? 以下是不同设备如何设置动态壁纸教程:</h2>
-            <br>
-            <h3>1. Lively Wallpaper 电脑 免费软件</h3>
-            <img src="https://store-images.s-microsoft.com/image/apps.4720.14416131676512756.84314783-1c86-4403-b991-2e1da8525703.bf78340f-7059-4641-8d3f-8a7f740be8c0" style="height: 50px; width: 50px; border-radius: 10px;">
-            <p style="color: #b6b6b6;">- Lively Wallpaper 是电脑微软商店里 Microsoft Store 能够直接搜到的设置动态壁纸软件。</p>
-            <br><br>
+                <div id="content41" class="content1">
+                    <br>
+                    <center>
+                        <br><br>
+                        <p style="color: #b6b6b6;">提示: 本网站在国内可能会出现无法加载的情况，因为外网可能在国内受限制网速可能变慢，但是一般是能够正常打开和保存壁纸的。</p>
+                        <br>
+                        <b style="color: #e9e9e9cb;">别当欧尼酱了！视频 </b>
+                        <br><br>
+                        <video width="550" height="270" controls style="border-radius: 5%;">
+                            <source src="https://github.com/huoshi111/huoshiwallpapervideo001/raw/refs/heads/main/%E5%88%AB%E5%BD%93%E6%AC%A7%E5%B0%BC%E9%85%B1%E4%BA%86%EF%BC%81.mp4" type="video/mp4">
+                            您的浏览器不支持HTML视频标签，请尝试使用现代浏览器查看。
+                        </video>
+    
+                        <br><br>
+                        <b style="color: #e9e9e9cb;">魔女之旅 第一集 </b>
+                        <br><br>
+                        <video width="550" height="270" controls style="border-radius: 5%;">
+                            <source src="https://ia802307.us.archive.org/3/items/01_20250113_20250113/%E9%AD%94%E5%A5%B3%E4%B9%8B%E6%97%85%20%E7%AC%AC01%E9%9B%86.mp4" type="video/mp4">
+                            您的浏览器不支持HTML视频标签，请尝试使用现代浏览器查看。
+                        </video>
 
-            <hr style="border: 1px solid rgb(78, 78, 78);">
+                        <br><br>
+                        <b style="color: #e9e9e9cb;">魔女之旅 第二集 </b>
+                        <br><br>
+                        <video width="550" height="270" controls style="border-radius: 5%;">
+                            <source src="https://archive.org/serve/02_20250114_202501/%E9%AD%94%E5%A5%B3%E4%B9%8B%E6%97%85%20%E7%AC%AC02%E9%9B%86.mp4" type="video/mp4">
+                            您的浏览器不支持HTML视频标签，请尝试使用现代浏览器查看。
+                        </video>
 
-            <h3>2. Wallpaper Engine 电脑 需要购买</h3>    
-            <img src="https://www.wallpaperengine.io/assets/img/wpe/wallpaper_engine.gif" style="height: 50px; width: 50px; border-radius: 10px;">
-            <p style="color: #b6b6b6;">- Wallpaper Engine 是一款功能强大的设置动态壁纸软件，可以在 <a style="color: #14e3d5;" href="https://store.steampowered.com/app/431960/Wallpaper_Engine/"> Steam </a>上购买获取或 <a style="color: #14e3d5;" href="https://www.wallpaperengine.io/zh-hans"> Wallpaper Engine 官网</a> 官网里获取。   </p>       
-            <br><br>
+                        <br><br>
+                        <b style="color: #e9e9e9cb;">魔女之旅 第三集 </b>
+                        <br><br>
+                        <video width="550" height="270" controls style="border-radius: 5%;">
+                            <source src="https://ia804607.us.archive.org/20/items/03_20250114_202501/%E9%AD%94%E5%A5%B3%E4%B9%8B%E6%97%85%20%E7%AC%AC03%E9%9B%86.mp4" type="video/mp4">
+                            您的浏览器不支持HTML视频标签，请尝试使用现代浏览器查看。
+                        </video>
 
-            <hr style="border: 1px solid rgb(78, 78, 78);">
+                        <br><br><br><br>
+                        <b style="color: #dfdfdfc6;"> 火狮 HUOSHI 动漫壁纸网站 © 2025 ---<a style="color: #14e3d5;" href="https://www.douyin.com/user/MS4wLjABAAAACijCHXWkdAit63xNKQJqV1v_SikFaSv361RJzIktzAX15pBKLOT65qZe7-A-wpHX?from_tab_name=main"> "抖音"</a> 本网站支持免费和无广告安全下载高清动漫壁纸。</b> 
+                    </center>
+                </div>
 
-            <h3>3. 元气壁纸 电脑，平板或手机 免费软件</h3>    
-            <img src="https://pp.myapp.com/ma_icon/0/icon_53897209_1732591160/256" style="height: 50px; width: 50px; border-radius: 10px;">
-            <p style="color: #b6b6b6;">- 元气壁纸 是一款能够设置很多动态壁的软件，可以在 <a style="color: #14e3d5;" href="https://desk.duba.com/">  元气壁纸 </a> 官网上获取。 </p>       
-            <br><br>
-
-            <hr style="border: 1px solid rgb(78, 78, 78);">
-                              
-            <br><br>
-            <p style="color: #b6b6b6;">提示: 本网站在国内可能会出现无法加载的情况，因为外网可能在国内受限制和网速变慢，但是一般是能够正常打开和保存壁纸的。</p>
-            <br>
-
-            <hr style="border: 1px solid rgb(78, 78, 78);">
-            <h2>下载的安全性与保障 请放心</h2>
-            <br>
-
-            <hr style="border: 1px solid rgb(78, 78, 78);">
-
-            <img src="https://raw.githubusercontent.com/huoshi111/huoshianquanprotect/refs/heads/main/b31461a351624393a654ea7f4c708abe.png" width="190px"; height="190px">
-            </center>
-            <p style="color: #b6b6b6;">- 关于网站下载视频壁纸和壁纸图的安全性说明；</p>
-            <p style="color: #b6b6b6;">1. HTTPS 安全协议: <br>所有下载操作均通过 HTTPS 加密传输，确保文件在传输过程中不被窃听或篡改。</p>
-            <p style="color: #b6b6b6;">2. 文件来源可信:<br> 我们上传的所有视频文件均经过严格筛选和验证，确保无病毒、无恶意代码，用户可以放心下载。</p>
-            <p style="color: #b6b6b6;">3. 无第三方干扰:<br> 网站不依赖任何第三方插件或外部服务，避免因外部资源导致的安全隐患。</p>
-            <p style="color: #b6b6b6;">4. 纯净无广告: <br> 平台保证无广告干扰，下载过程简洁高效，用户无需担心弹窗或恶意链接。</p>
-            <p style="color: #b6b6b6;">5. 我们不会收集用户隐私信息，保护您的数据安全。</p>
-            <p style="color: #b6b6b6;">6. 资源来自官方授权，无广告、无不良内容。</p>
-            <p style="color: #b6b6b6;">7. 网站不会显示任何陌生内容，如果有问题会通知一下的。</p>
-            <p style="color: #b6b6b6;">8. 如有任何疑问，请随时联系 火狮HUOSHI 在抖音网页版 搜索 <br><a style="color: #14e3d5;" href="https://www.douyin.com/user/MS4wLjABAAAACijCHXWkdAit63xNKQJqV1v_SikFaSv361RJzIktzAX15pBKLOT65qZe7-A-wpHX?from_tab_name=main"> "点击这里 火狮 HUOSHI"</a> 私信。</p>
-            <br>
-            <hr style="border: 1px solid rgb(78, 78, 78);">
-            <p style="color: #b6b6b6;"><strong>如果还是不放心的话，请阅读以下说明；</strong><br> <br> 所有视频壁纸均托管在 GitHub Pages 平台，来源透明，支持用户查看上传记录。下载前后，可用杀毒软件或在线工具（如 VirusTotal，AntiVirus，360杀毒 等）扫描文件安全性。如有疑问，请在这里的 抖音 视频下留言，我们会及时回复！</p>
+            </div>
         </div>
     </div>
 
@@ -381,7 +535,8 @@
 
     <header>
         <div class="menu">
-            <button id="unique-question-button-id">?</button>
+    <!-- 打开模态框按钮 -->
+    <button id="unique-question-button-id1">⛭</button>
             <img src="https://raw.githubusercontent.com/huoshi111/huoshiicon/refs/heads/main/%E7%81%AB%E7%8B%AEHuoShi%20logo.png" height="40px"; width="50px">
             <b style="color: #e28118dc;">火狮  <br> HUOSHI</b>
             <button onclick="switchCategory('recommended')">推荐</button>
@@ -400,6 +555,7 @@
                 <button onclick="fillSearch('原神')">原神</button>
                 <button onclick="fillSearch('狐妖小红娘')">狐妖小红娘</button>
                 <button onclick="fillSearch('初音未来')">初音未来</button>
+                <button onclick="fillSearch('别当欧尼酱了！')">别当欧尼酱了！</button>
             </div>
         </div>
     </header>
@@ -502,6 +658,18 @@
                 <img src="https://raw.githubusercontent.com/huoshi111/huoshiwallpaper13/refs/heads/main/HUOSHI.wallpaper.image.%E4%BC%8A%E8%95%BE%E5%A8%9CElaina.02.jpeg" alt="HUOSHI图片壁纸" style="width: 100%; border-radius: 10px;">
                 <div class="description"><b>推荐: 魔女之旅 </b> 伊蕾娜 图片 头像</div>
                 <button class="download" onclick="downloadImage('https://raw.githubusercontent.com/huoshi111/huoshiwallpaper13/refs/heads/main/HUOSHI.wallpaper.image.%E4%BC%8A%E8%95%BE%E5%A8%9CElaina.02.jpeg')">下载图片壁纸</button>
+            </div>
+
+            <div class="video-card" data-category="recommended">
+                <video src="https://github.com/huoshi111/huoshiwallpaper31/raw/refs/heads/main/HUOSHI.wallpaper.%E4%B8%8A%E6%B5%B7%E4%B8%AD%E5%BF%83.%E6%96%AF%E5%8D%A1%E8%92%82%E5%A3%81%E7%BA%B8.mp4"></video>
+                <div class="description"><b>推荐: 上海中心 斯卡蒂壁纸 动漫</b> 上海中心 斯卡蒂壁纸 电脑动态壁纸 <br><br> 内存: 6.9 MB 画质: 1920 x 1080</div>
+                <button class="download" onclick="downloadVideo('https://github.com/huoshi111/huoshiwallpaper31/raw/refs/heads/main/HUOSHI.wallpaper.%E4%B8%8A%E6%B5%B7%E4%B8%AD%E5%BF%83.%E6%96%AF%E5%8D%A1%E8%92%82%E5%A3%81%E7%BA%B8.mp4')">下载壁纸</button>
+            </div>
+    
+            <div class="video-card" data-category="recommended">
+                <video src="https://github.com/huoshi111/huoshiwallpaper31/raw/refs/heads/main/HUOSHI.wallpaper.Snowfall.With.You.01.mp4"></video>
+                <div class="description"><b>推荐: Snowfall With You 动漫</b> Snowfall With You 电脑动态壁纸 <br><br> 内存: 17.5 MB 画质: 2560 x 1440</div>
+                <button class="download" onclick="downloadVideo('https://github.com/huoshi111/huoshiwallpaper31/raw/refs/heads/main/HUOSHI.wallpaper.Snowfall.With.You.01.mp4')">下载壁纸</button>
             </div>
 
         
@@ -924,8 +1092,179 @@
             <button class="download" onclick="downloadVideo('https://github.com/huoshi111/huoshiwallpaper22/raw/refs/heads/main/HUOSHI.wallapaper.Miku.001.mp4')">下载壁纸</button>
         </div>
 
-  
+        <div class="video-card" data-category="anime" style="display: none;">
+            <img src="https://github.com/huoshi111/huoshiwallpaper24/raw/refs/heads/main/HUOSHI.wallpaper.image.Elaina.2020.webp" alt="图片壁纸" style="width: 100%; border-radius: 10px;">
+            <div class="description"><b>魔女之旅 动漫</b> 伊蕾娜 下雨 手机壁纸图</div>
+            <button class="download" onclick="downloadImage('https://i.ibb.co/R7sLXQb/HUOSHI-wallpaper-image-Elaina-2020.png')">下载图片壁纸</button>
+        </div>
 
+        <div class="video-card" data-category="anime" style="display: none;">
+            <img src="https://raw.githubusercontent.com/huoshi111/huoshiwallpaper26/refs/heads/main/HUOSHI.wallpapet.Mihari.%E7%BE%8E%E6%B3%A2%E9%87%8C.01.jpeg" alt="图片壁纸" style="width: 100%; border-radius: 10px;">
+            <div class="description"><b>别当欧尼酱了！美波里 动漫</b> 美波里 手机壁纸图 </div>
+            <button class="download" onclick="downloadImage('https://raw.githubusercontent.com/huoshi111/huoshiwallpaper26/refs/heads/main/HUOSHI.wallpapet.Mihari.%E7%BE%8E%E6%B3%A2%E9%87%8C.01.jpeg')">下载图片壁纸</button>
+        </div>
+
+        <div class="video-card" data-category="anime" style="display: none;">
+            <img src="https://raw.githubusercontent.com/huoshi111/huoshiwallpaper26/refs/heads/main/HUOSHI.wallpapet.Mihari.%E7%BE%8E%E6%B3%A2%E9%87%8C.02.png" alt="图片壁纸" style="width: 100%; border-radius: 10px;">
+            <div class="description"><b>别当欧尼酱了！美波里 Mihari 动漫</b> 美波里 手机壁纸图 </div>
+            <button class="download" onclick="downloadImage('https://raw.githubusercontent.com/huoshi111/huoshiwallpaper26/refs/heads/main/HUOSHI.wallpapet.Mihari.%E7%BE%8E%E6%B3%A2%E9%87%8C.02.png')">下载图片壁纸</button>
+        </div>
+
+        <div class="video-card" data-category="anime" style="display: none;">
+            <img src="https://raw.githubusercontent.com/huoshi111/huoshiwallpaper26/refs/heads/main/HUOSHI.wallpapet.Mihari.%E7%BE%8E%E6%B3%A2%E9%87%8C.03.jpg" alt="图片壁纸" style="width: 100%; border-radius: 10px;">
+            <div class="description"><b>别当欧尼酱了！美波里 动漫</b> 美波里 手机壁纸图 </div>
+            <button class="download" onclick="downloadImage('https://raw.githubusercontent.com/huoshi111/huoshiwallpaper26/refs/heads/main/HUOSHI.wallpapet.Mihari.%E7%BE%8E%E6%B3%A2%E9%87%8C.03.jpg')">下载图片壁纸</button>
+        </div>
+
+        <div class="video-card" data-category="anime" style="display: none;">
+            <img src="https://raw.githubusercontent.com/huoshi111/huoshiwallpaper26/refs/heads/main/HUOSHI.wallpapet.Mihari.%E7%BE%8E%E6%B3%A2%E9%87%8C.06.jpeg" alt="图片壁纸" style="width: 100%; border-radius: 10px;">
+            <div class="description"><b>别当欧尼酱了！美波里和绪山真寻 动漫</b> 美波里和绪山真寻 Mahiro Oyama 壁纸图 </div>
+            <button class="download" onclick="downloadImage('https://raw.githubusercontent.com/huoshi111/huoshiwallpaper26/refs/heads/main/HUOSHI.wallpapet.Mihari.%E7%BE%8E%E6%B3%A2%E9%87%8C.06.jpeg')">下载图片壁纸</button>
+        </div>
+
+        <div class="video-card" data-category="anime" style="display: none;">
+            <img src="https://raw.githubusercontent.com/huoshi111/huoshiwallpaper26/refs/heads/main/HUOSHI.wallpapet.Mihari.%E7%BE%8E%E6%B3%A2%E9%87%8C.07.jpeg" alt="图片壁纸" style="width: 100%; border-radius: 10px;">
+            <div class="description"><b>别当欧尼酱了！美波里和绪山真寻 动漫</b> 美波里和绪山真寻 Mahiro Oyama 壁纸图 </div>
+            <button class="download" onclick="downloadImage('https://raw.githubusercontent.com/huoshi111/huoshiwallpaper26/refs/heads/main/HUOSHI.wallpapet.Mihari.%E7%BE%8E%E6%B3%A2%E9%87%8C.07.jpeg')">下载图片壁纸</button>
+        </div>
+
+        <div class="video-card" data-category="anime" style="display: none;">
+            <img src="https://raw.githubusercontent.com/huoshi111/huoshiwallpaper26/refs/heads/main/HUOSHI.wallpapet.Mihari.%E7%BE%8E%E6%B3%A2%E9%87%8C.08.jpeg" alt="图片壁纸" style="width: 100%; border-radius: 10px;">
+            <div class="description"><b>别当欧尼酱了！美波里和绪山真寻 动漫</b> 美波里和绪山真寻 Mahiro Oyama 壁纸图 </div>
+            <button class="download" onclick="downloadImage('https://raw.githubusercontent.com/huoshi111/huoshiwallpaper26/refs/heads/main/HUOSHI.wallpapet.Mihari.%E7%BE%8E%E6%B3%A2%E9%87%8C.08.jpeg')">下载图片壁纸</button>
+        </div>
+
+        <div class="video-card" data-category="anime" style="display: none;">
+            <img src="https://raw.githubusercontent.com/huoshi111/huoshiwallpaper26/refs/heads/main/HUOSHI.wallpapet.Mihari.%E7%BE%8E%E6%B3%A2%E9%87%8C.09.jpeg" alt="图片壁纸" style="width: 100%; border-radius: 10px;">
+            <div class="description"><b>别当欧尼酱了！绪山真寻 动漫</b> 绪山真寻 Mahiro Oyama 壁纸图 </div>
+            <button class="download" onclick="downloadImage('https://raw.githubusercontent.com/huoshi111/huoshiwallpaper26/refs/heads/main/HUOSHI.wallpapet.Mihari.%E7%BE%8E%E6%B3%A2%E9%87%8C.09.jpeg')">下载图片壁纸</button>
+        </div>
+
+        <div class="video-card" data-category="anime" style="display: none;">
+            <img src="https://raw.githubusercontent.com/huoshi111/huoshiwallpaper26.1/refs/heads/main/HUOSHI.wallpapet.Mihari.%E7%BE%8E%E6%B3%A2%E9%87%8C.04.jpg" alt="图片壁纸" style="width: 100%; border-radius: 10px;">
+            <div class="description"><b>别当欧尼酱了！美波里和绪山真寻 动漫</b> 美波里和绪山真寻 Mahiro Oyama 电脑壁纸图 </div>
+            <button class="download" onclick="downloadImage('https://raw.githubusercontent.com/huoshi111/huoshiwallpaper26.1/refs/heads/main/HUOSHI.wallpapet.Mihari.%E7%BE%8E%E6%B3%A2%E9%87%8C.04.jpg')">下载图片壁纸</button>
+        </div>
+
+        <div class="video-card" data-category="anime" style="display: none;">
+            <img src="https://raw.githubusercontent.com/huoshi111/huoshiwallpaper27/refs/heads/main/HUOSHI.wallpaper.anime.%E7%9F%A5%E6%9B%B4%E9%B8%9F01.jpeg" alt="图片壁纸" style="width: 100%; border-radius: 10px;">
+            <div class="description"><b>崩坏 星穹铁道 知更鸟 动漫</b>崩铁 知更鸟 手机壁纸图 </div>
+            <button class="download" onclick="downloadImage('https://raw.githubusercontent.com/huoshi111/huoshiwallpaper27/refs/heads/main/HUOSHI.wallpaper.anime.%E7%9F%A5%E6%9B%B4%E9%B8%9F01.jpeg')">下载图片壁纸</button>
+        </div>
+
+        <div class="video-card" data-category="anime" style="display: none;">
+            <img src="https://raw.githubusercontent.com/huoshi111/huoshiwallpaper27/refs/heads/main/HUOSHI.wallpaper.anime.image105.jpeg" alt="图片壁纸" style="width: 100%; border-radius: 10px;">
+            <div class="description"><b> 动漫</b>手机壁纸图 </div>
+            <button class="download" onclick="downloadImage('https://raw.githubusercontent.com/huoshi111/huoshiwallpaper27/refs/heads/main/HUOSHI.wallpaper.anime.image105.jpeg')">下载图片壁纸</button>
+        </div>
+
+        <div class="video-card" data-category="anime" style="display: none;">
+            <img src="https://raw.githubusercontent.com/huoshi111/huoshiwallpaper27/refs/heads/main/HUOSHI.wallpaper.anime.image104.jpeg" alt="图片壁纸" style="width: 100%; border-radius: 10px;">
+            <div class="description"><b> 动漫</b>手机壁纸图 </div>
+            <button class="download" onclick="downloadImage('https://raw.githubusercontent.com/huoshi111/huoshiwallpaper27/refs/heads/main/HUOSHI.wallpaper.anime.image104.jpeg')">下载图片壁纸</button>
+        </div>
+
+        <div class="video-card" data-category="anime" style="display: none;">
+            <img src="https://raw.githubusercontent.com/huoshi111/huoshiwallpaper27/refs/heads/main/HUOSHI.wallpaper.anime.image103.jpeg" alt="图片壁纸" style="width: 100%; border-radius: 10px;">
+            <div class="description"><b> 动漫</b>本图片带有水印 手机壁纸图 </div>
+            <button class="download" onclick="downloadImage('https://raw.githubusercontent.com/huoshi111/huoshiwallpaper27/refs/heads/main/HUOSHI.wallpaper.anime.image103.jpeg')">下载图片壁纸</button>
+        </div>
+
+        <div class="video-card" data-category="anime" style="display: none;">
+            <img src="https://raw.githubusercontent.com/huoshi111/huoshiwallpaper27/refs/heads/main/HUOSHI.wallpaper.anime.image102.jpeg" alt="图片壁纸" style="width: 100%; border-radius: 10px;">
+            <div class="description"><b> 动漫</b>手机壁纸图 </div>
+            <button class="download" onclick="downloadImage('https://raw.githubusercontent.com/huoshi111/huoshiwallpaper27/refs/heads/main/HUOSHI.wallpaper.anime.image102.jpeg')">下载图片壁纸</button>
+        </div>
+
+        <div class="video-card" data-category="anime" style="display: none;">
+            <img src="https://raw.githubusercontent.com/huoshi111/huoshiwallpaper27/refs/heads/main/HUOSHI.wallpaper.anime.image101.jpeg" alt="图片壁纸" style="width: 100%; border-radius: 10px;">
+            <div class="description"><b> 动漫</b>电脑壁纸图 </div>
+            <button class="download" onclick="downloadImage('https://raw.githubusercontent.com/huoshi111/huoshiwallpaper27/refs/heads/main/HUOSHI.wallpaper.anime.image101.jpeg')">下载图片壁纸</button>
+        </div>
+
+        <div class="video-card" data-category="anime" style="display: none;">
+            <img src="https://raw.githubusercontent.com/huoshi111/huoshiwallpaper28/refs/heads/main/HUOSHI.wallpaper.Charlotte.001.jpg" alt="图片壁纸" style="width: 100%; border-radius: 10px;">
+            <div class="description"><b> 动漫</b>夏洛特 Charlotte 电脑壁纸图 </div>
+            <button class="download" onclick="downloadImage('https://raw.githubusercontent.com/huoshi111/huoshiwallpaper28/refs/heads/main/HUOSHI.wallpaper.Charlotte.001.jpg')">下载图片壁纸</button>
+        </div>
+
+        <div class="video-card" data-category="anime" style="display: none;">
+            <img src="https://raw.githubusercontent.com/huoshi111/huoshiwallpaper28/refs/heads/main/HUOSHI.wallpaper.Charlotte.002.png" alt="图片壁纸" style="width: 100%; border-radius: 10px;">
+            <div class="description"><b> 动漫</b>夏洛特 Charlotte 夜晚 电脑壁纸图 </div>
+            <button class="download" onclick="downloadImage('https://raw.githubusercontent.com/huoshi111/huoshiwallpaper28/refs/heads/main/HUOSHI.wallpaper.Charlotte.002.png')">下载图片壁纸</button>
+        </div>
+
+        <div class="video-card" data-category="anime" style="display: none;">
+            <img src="https://raw.githubusercontent.com/huoshi111/huoshiwallpaper29/refs/heads/main/HUOSHI.wallpaper.%E6%9C%89%E5%B8%8C001.jpeg" alt="图片壁纸" style="width: 100%; border-radius: 10px;">
+            <div class="description"><b> 动漫</b> 有希 手机壁纸图 <br><br> 内存: 156.3 KB 画质: 783 x 1542 </div>
+            <button class="download" onclick="downloadImage('https://raw.githubusercontent.com/huoshi111/huoshiwallpaper29/refs/heads/main/HUOSHI.wallpaper.%E6%9C%89%E5%B8%8C001.jpeg')">下载图片壁纸</button>
+        </div>
+
+        <div class="video-card" data-category="anime" style="display: none;">
+            <img src="https://raw.githubusercontent.com/huoshi111/huoshiwallpaper29/refs/heads/main/HUOSHI.wallpaper.%E6%9C%89%E5%B8%8C002.jpeg" alt="图片壁纸" style="width: 100%; border-radius: 10px;">
+            <div class="description"><b> 动漫</b> 有希 手机壁纸图 <br><br> 内存: 171.3 KB 画质: 874 x 1539 </div>
+            <button class="download" onclick="downloadImage('https://raw.githubusercontent.com/huoshi111/huoshiwallpaper29/refs/heads/main/HUOSHI.wallpaper.%E6%9C%89%E5%B8%8C002.jpeg')">下载图片壁纸</button>
+        </div>
+
+        <div class="video-card" data-category="anime" style="display: none;">
+            <img src="https://raw.githubusercontent.com/huoshi111/huoshiwallpaper29/refs/heads/main/HUOSHI.wallpaper.%E6%9C%89%E5%B8%8C003.jpeg" alt="图片壁纸" style="width: 100%; border-radius: 10px;">
+            <div class="description"><b> 动漫</b> 有希 手机壁纸图 <br><br> 内存: 122.5 KB 画质: 788 x 1539 </div>
+            <button class="download" onclick="downloadImage('https://raw.githubusercontent.com/huoshi111/huoshiwallpaper29/refs/heads/main/HUOSHI.wallpaper.%E6%9C%89%E5%B8%8C003.jpeg')">下载图片壁纸</button>
+        </div>
+
+        <div class="video-card" data-category="anime" style="display: none;">
+            <img src="https://raw.githubusercontent.com/huoshi111/huoshiwallpaper29/refs/heads/main/HUOSHI.wallpaper.%E7%A2%A7%E8%93%9D%E6%A1%A3%E6%A1%88.%E9%A3%8E%E6%99%AF%E6%B5%B7%E8%BE%B9.jpeg" alt="图片壁纸" style="width: 100%; border-radius: 10px;">
+            <div class="description"><b>碧蓝档案 动漫</b> 电脑壁纸图 <br><br> 内存: 1.6 MB 画质: 7489 x 3306 </div>
+            <button class="download" onclick="downloadImage('https://raw.githubusercontent.com/huoshi111/huoshiwallpaper29/refs/heads/main/HUOSHI.wallpaper.%E7%A2%A7%E8%93%9D%E6%A1%A3%E6%A1%88.%E9%A3%8E%E6%99%AF%E6%B5%B7%E8%BE%B9.jpeg')">下载图片壁纸</button>
+        </div>
+
+        <div class="video-card" data-category="anime" style="display: none;">
+            <img src="https://raw.githubusercontent.com/huoshi111/huoshiwallpaper29/refs/heads/main/HUOSHI.wallpaper.%E7%A2%A7%E8%93%9D%E6%A1%A3%E6%A1%88Takanashi.Hoshino.002.png" alt="图片壁纸" style="width: 100%; border-radius: 10px;">
+            <div class="description"><b>碧蓝档案 动漫</b> 小鸟游星野 手机壁纸图 <br><br> 内存: 310.5 KB 画质: 2208 x 3106 </div>
+            <button class="download" onclick="downloadImage('https://raw.githubusercontent.com/huoshi111/huoshiwallpaper29/refs/heads/main/HUOSHI.wallpaper.%E7%A2%A7%E8%93%9D%E6%A1%A3%E6%A1%88Takanashi.Hoshino.002.png')">下载图片壁纸</button>
+        </div>
+
+        <div class="video-card" data-category="anime" style="display: none;">
+            <img src="https://raw.githubusercontent.com/huoshi111/huoshiwallpaper29/refs/heads/main/HUOSHI.wallpaper.%E8%9C%A1%E7%AC%94%E5%B0%8F%E6%96%B0.jpg" alt="图片壁纸" style="width: 100%; border-radius: 10px;">
+            <div class="description"><b>蜡笔小新 动画片 动漫</b> 蜡笔小新 手机壁纸图 <br><br> 内存: 1.8 MB 画质: 1784 x 3867 </div>
+            <button class="download" onclick="downloadImage('https://raw.githubusercontent.com/huoshi111/huoshiwallpaper29/refs/heads/main/HUOSHI.wallpaper.%E8%9C%A1%E7%AC%94%E5%B0%8F%E6%96%B0.jpg')">下载图片壁纸</button>
+        </div>
+
+        <div class="video-card" data-category="anime" style="display: none;">
+            <img src="https://raw.githubusercontent.com/huoshi111/huoshiwallpaper30/refs/heads/main/HUOSHI.wallpaper.Kimi.no.Na.wa%E4%BD%A0%E7%9A%84%E5%90%8D%E5%AD%9702.png" alt="图片壁纸" style="width: 100%; border-radius: 10px;">
+            <div class="description"><b>你的名字 动漫</b> 你的名字 手机壁纸图 <br><br> 内存: 2.2 MB 画质: 912 x 1459 </div>
+            <button class="download" onclick="downloadImage('https://raw.githubusercontent.com/huoshi111/huoshiwallpaper30/refs/heads/main/HUOSHI.wallpaper.Kimi.no.Na.wa%E4%BD%A0%E7%9A%84%E5%90%8D%E5%AD%9702.png')">下载图片壁纸</button>
+        </div>
+
+        <div class="video-card" data-category="anime" style="display: none;">
+            <img src="https://raw.githubusercontent.com/huoshi111/huoshiwallpaper30/refs/heads/main/HUOSHI.wallpaper.Kimi.no.Na.wa%E4%BD%A0%E7%9A%84%E5%90%8D%E5%AD%9703.jpg" alt="图片壁纸" style="width: 100%; border-radius: 10px;">
+            <div class="description"><b>你的名字 动漫</b> 你的名字 手机壁纸图 <br><br> 内存: 1.9 MB 画质: 2084 x 3000 </div>
+            <button class="download" onclick="downloadImage('https://raw.githubusercontent.com/huoshi111/huoshiwallpaper30/refs/heads/main/HUOSHI.wallpaper.Kimi.no.Na.wa%E4%BD%A0%E7%9A%84%E5%90%8D%E5%AD%9703.jpg')">下载图片壁纸</button>
+        </div>
+
+        <div class="video-card" data-category="anime" style="display: none;">
+            <img src="https://raw.githubusercontent.com/huoshi111/huoshiwallpaper30/refs/heads/main/HUOSHI.wallpaper.Kimi.no.Na.wa%E4%BD%A0%E7%9A%84%E5%90%8D%E5%AD%9704.png" alt="图片壁纸" style="width: 100%; border-radius: 10px;">
+            <div class="description"><b>你的名字 动漫</b> 你的名字 电脑壁纸图 <br><br> 内存: 1.7 MB 画质: 1920 x 1200 </div>
+            <button class="download" onclick="downloadImage('https://raw.githubusercontent.com/huoshi111/huoshiwallpaper30/refs/heads/main/HUOSHI.wallpaper.Kimi.no.Na.wa%E4%BD%A0%E7%9A%84%E5%90%8D%E5%AD%9704.png')">下载图片壁纸</button>
+        </div>
+
+        <div class="video-card" data-category="anime" style="display: none;">
+            <img src="https://raw.githubusercontent.com/huoshi111/huoshiwallpaper30/refs/heads/main/HUOSHI.wallpaper.Kimi.no.Na.wa%E4%BD%A0%E7%9A%84%E5%90%8D%E5%AD%9705.jpg" alt="图片壁纸" style="width: 100%; border-radius: 10px;">
+            <div class="description"><b>你的名字 动漫</b> 你的名字 手机壁纸图 <br><br> 内存: 1.5 MB 画质: 1607 x 2266 </div>
+            <button class="download" onclick="downloadImage('https://raw.githubusercontent.com/huoshi111/huoshiwallpaper30/refs/heads/main/HUOSHI.wallpaper.Kimi.no.Na.wa%E4%BD%A0%E7%9A%84%E5%90%8D%E5%AD%9705.jpg')">下载图片壁纸</button>
+        </div>
+
+        <div class="video-card" data-category="anime" style="display:none;">
+            <video src="https://github.com/huoshi111/huoshiwallpaper31/raw/refs/heads/main/HUOSHI.wallpaper.%E4%B8%8A%E6%B5%B7%E4%B8%AD%E5%BF%83.%E6%96%AF%E5%8D%A1%E8%92%82%E5%A3%81%E7%BA%B8.mp4"></video>
+            <div class="description"><b>上海中心 斯卡蒂壁纸 动漫</b> 上海中心 斯卡蒂壁纸 电脑动态壁纸 <br><br> 内存: 6.9 MB 画质: 1920 x 1080</div>
+            <button class="download" onclick="downloadVideo('https://github.com/huoshi111/huoshiwallpaper31/raw/refs/heads/main/HUOSHI.wallpaper.%E4%B8%8A%E6%B5%B7%E4%B8%AD%E5%BF%83.%E6%96%AF%E5%8D%A1%E8%92%82%E5%A3%81%E7%BA%B8.mp4')">下载壁纸</button>
+        </div>
+
+        <div class="video-card" data-category="anime" style="display:none;">
+            <video src="https://github.com/huoshi111/huoshiwallpaper31/raw/refs/heads/main/HUOSHI.wallpaper.Snowfall.With.You.01.mp4"></video>
+            <div class="description"><b>Snowfall With You 动漫</b> Snowfall With You 电脑动态壁纸 <br><br> 内存: 17.5 MB 画质: 2560 x 1440</div>
+            <button class="download" onclick="downloadVideo('https://github.com/huoshi111/huoshiwallpaper31/raw/refs/heads/main/HUOSHI.wallpaper.Snowfall.With.You.01.mp4')">下载壁纸</button>
+        </div>
 
 
 
@@ -1226,6 +1565,139 @@
             <button class="download" onclick="downloadImage('https://raw.githubusercontent.com/huoshi111/huoshiwallpaperimage01/refs/heads/main/HUOSHI.wallpaper.ElainaAnime.image.01.jpg')">下载图片壁纸</button>
         </div>
 
+        <div class="video-card" data-category="muonvzhilv" style="display: none;">
+            <img src="https://raw.githubusercontent.com/huoshi111/huoshiwallpaper24/refs/heads/main/HUOSHI.wallpaper.image.Elaina.203.jpg" alt="HUOSHI图片壁纸" style="width: 100%; border-radius: 10px;">
+            <div class="description"><b>魔女之旅 </b> 伊蕾娜海边 手机壁纸图  </div>
+            <button class="download" onclick="downloadImage('https://raw.githubusercontent.com/huoshi111/huoshiwallpaper24/refs/heads/main/HUOSHI.wallpaper.image.Elaina.203.jpg')">下载图片壁纸</button>
+        </div>
+
+        <div class="video-card" data-category="muonvzhilv" style="display: none;">
+            <img src="https://raw.githubusercontent.com/huoshi111/huoshiwallpaper24/refs/heads/main/HUOSHI.wallpaper.image.Elaina.204.jpg" alt="HUOSHI图片壁纸" style="width: 100%; border-radius: 10px;">
+            <div class="description"><b>魔女之旅 </b> 伊蕾娜 手机壁纸图  </div>
+            <button class="download" onclick="downloadImage('https://raw.githubusercontent.com/huoshi111/huoshiwallpaper24/refs/heads/main/HUOSHI.wallpaper.image.Elaina.204.jpg')">下载图片壁纸</button>
+        </div>
+
+        <div class="video-card" data-category="muonvzhilv" style="display: none;">
+            <img src="https://raw.githubusercontent.com/huoshi111/huoshiwallpaper24/refs/heads/main/HUOSHI.wallpaper.image.Elaina.205.jpeg" alt="HUOSHI图片壁纸" style="width: 100%; border-radius: 10px;">
+            <div class="description"><b>魔女之旅 </b> 伊蕾娜 手机壁纸图  </div>
+            <button class="download" onclick="downloadImage('https://raw.githubusercontent.com/huoshi111/huoshiwallpaper24/refs/heads/main/HUOSHI.wallpaper.image.Elaina.205.jpeg')">下载图片壁纸</button>
+        </div>
+
+        <div class="video-card" data-category="muonvzhilv" style="display: none;">
+            <img src="https://raw.githubusercontent.com/huoshi111/huoshiwallpaper24/refs/heads/main/HUOSHI.wallpaper.image.Elaina.206.jpeg" alt="HUOSHI图片壁纸" style="width: 100%; border-radius: 10px;">
+            <div class="description"><b>魔女之旅 </b> 伊蕾娜 手机壁纸图  </div>
+            <button class="download" onclick="downloadImage('https://raw.githubusercontent.com/huoshi111/huoshiwallpaper24/refs/heads/main/HUOSHI.wallpaper.image.Elaina.206.jpeg')">下载图片壁纸</button>
+        </div>
+
+        <div class="video-card" data-category="muonvzhilv" style="display: none;">
+            <img src="https://raw.githubusercontent.com/huoshi111/huoshiwallpaper24/refs/heads/main/HUOSHI.wallpaper.image.Elaina.207.jpeg" alt="HUOSHI图片壁纸" style="width: 100%; border-radius: 10px;">
+            <div class="description"><b>魔女之旅 </b> 伊蕾娜 手机壁纸图  </div>
+            <button class="download" onclick="downloadImage('https://raw.githubusercontent.com/huoshi111/huoshiwallpaper24/refs/heads/main/HUOSHI.wallpaper.image.Elaina.207.jpeg')">下载图片壁纸</button>
+        </div>
+
+        <div class="video-card" data-category="muonvzhilv" style="display: none;">
+            <img src="https://raw.githubusercontent.com/huoshi111/huoshiwallpaper24/refs/heads/main/HUOSHI.wallpaper.image.Elaina.208.jpeg" alt="HUOSHI图片壁纸" style="width: 100%; border-radius: 10px;">
+            <div class="description"><b>魔女之旅 </b> 伊蕾娜 头像图  </div>
+            <button class="download" onclick="downloadImage('https://raw.githubusercontent.com/huoshi111/huoshiwallpaper24/refs/heads/main/HUOSHI.wallpaper.image.Elaina.208.jpeg')">下载图片壁纸</button>
+        </div>
+
+        <div class="video-card" data-category="muonvzhilv" style="display: none;">
+            <img src="https://raw.githubusercontent.com/huoshi111/huoshiwallpaper24/refs/heads/main/HUOSHI.wallpaper.image.Elaina.209.jpeg" alt="HUOSHI图片壁纸" style="width: 100%; border-radius: 10px;">
+            <div class="description"><b>魔女之旅 </b> 伊蕾娜 头像图  </div>
+            <button class="download" onclick="downloadImage('https://raw.githubusercontent.com/huoshi111/huoshiwallpaper24/refs/heads/main/HUOSHI.wallpaper.image.Elaina.209.jpeg')">下载图片壁纸</button>
+        </div>
+
+        <div class="video-card" data-category="muonvzhilv" style="display: none;">
+            <img src="https://raw.githubusercontent.com/huoshi111/huoshiwallpaper24/refs/heads/main/HUOSHI.wallpaper.image.Elaina.210.jpeg" alt="HUOSHI图片壁纸" style="width: 100%; border-radius: 10px;">
+            <div class="description"><b>魔女之旅 </b> 伊蕾娜 头像图  </div>
+            <button class="download" onclick="downloadImage('https://raw.githubusercontent.com/huoshi111/huoshiwallpaper24/refs/heads/main/HUOSHI.wallpaper.image.Elaina.210.jpeg')">下载图片壁纸</button>
+        </div>
+
+        <div class="video-card" data-category="muonvzhilv" style="display: none;">
+            <img src="https://raw.githubusercontent.com/huoshi111/huoshiwallpaper24/refs/heads/main/HUOSHI.wallpaper.image.Elaina.211.jpeg" alt="HUOSHI图片壁纸" style="width: 100%; border-radius: 10px;">
+            <div class="description"><b>魔女之旅 </b> 伊蕾娜 头像图  </div>
+            <button class="download" onclick="downloadImage('https://raw.githubusercontent.com/huoshi111/huoshiwallpaper24/refs/heads/main/HUOSHI.wallpaper.image.Elaina.211.jpeg')">下载图片壁纸</button>
+        </div>
+
+        <div class="video-card" data-category="muonvzhilv" style="display: none;">
+            <img src="https://raw.githubusercontent.com/huoshi111/huoshiwallpaper24/refs/heads/main/HUOSHI.wallpaper.image.Elaina.212.jpeg" alt="HUOSHI图片壁纸" style="width: 100%; border-radius: 10px;">
+            <div class="description"><b>魔女之旅 </b> 伊蕾娜 头像图  </div>
+            <button class="download" onclick="downloadImage('https://raw.githubusercontent.com/huoshi111/huoshiwallpaper24/refs/heads/main/HUOSHI.wallpaper.image.Elaina.212.jpeg')">下载图片壁纸</button>
+        </div>
+
+        <div class="video-card" data-category="muonvzhilv" style="display: none;">
+            <img src="https://raw.githubusercontent.com/huoshi111/huoshiwallpaper24/refs/heads/main/HUOSHI.wallpaper.image.Elaina.213.jpeg" alt="HUOSHI图片壁纸" style="width: 100%; border-radius: 10px;">
+            <div class="description"><b>魔女之旅 </b> 伊蕾娜 头像图  </div>
+            <button class="download" onclick="downloadImage('https://raw.githubusercontent.com/huoshi111/huoshiwallpaper24/refs/heads/main/HUOSHI.wallpaper.image.Elaina.213.jpeg')">下载图片壁纸</button>
+        </div>
+
+        <div class="video-card" data-category="muonvzhilv" style="display: none;">
+            <img src="https://raw.githubusercontent.com/huoshi111/huoshiwallpaper24/refs/heads/main/HUOSHI.wallpaper.image.Elaina.214.jpeg" alt="HUOSHI图片壁纸" style="width: 100%; border-radius: 10px;">
+            <div class="description"><b>魔女之旅 </b> 伊蕾娜 头像图  </div>
+            <button class="download" onclick="downloadImage('https://raw.githubusercontent.com/huoshi111/huoshiwallpaper24/refs/heads/main/HUOSHI.wallpaper.image.Elaina.214.jpeg')">下载图片壁纸</button>
+        </div>
+
+        <div class="video-card" data-category="muonvzhilv" style="display: none;">
+            <img src="https://raw.githubusercontent.com/huoshi111/huoshiwallpaper24/refs/heads/main/HUOSHI.wallpaper.image.Elaina.215.jpeg" alt="HUOSHI图片壁纸" style="width: 100%; border-radius: 10px;">
+            <div class="description"><b>魔女之旅 </b> 伊蕾娜 电脑壁纸图  </div>
+            <button class="download" onclick="downloadImage('https://raw.githubusercontent.com/huoshi111/huoshiwallpaper24/refs/heads/main/HUOSHI.wallpaper.image.Elaina.215.jpeg')">下载图片壁纸</button>
+        </div>
+
+        <div class="video-card" data-category="muonvzhilv" style="display: none;">
+            <img src="https://github.com/huoshi111/huoshiwallpaper24/raw/refs/heads/main/HUOSHI.wallpaper.image.Elaina.2020.webp" alt="图片壁纸" style="width: 100%; border-radius: 10px;">
+            <div class="description"><b>魔女之旅 </b> 伊蕾娜 下雨 手机壁纸图</div>
+            <button class="download" onclick="downloadImage('https://i.ibb.co/R7sLXQb/HUOSHI-wallpaper-image-Elaina-2020.png')">下载图片壁纸</button>
+        </div>
+
+        <div class="video-card" data-category="muonvzhilv" style="display: none;">
+            <img src="https://raw.githubusercontent.com/huoshi111/huoshiwallpaper24/refs/heads/main/HUOSHI.wallpaper.image.Elaina.217.jpeg" alt="HUOSHI图片壁纸" style="width: 100%; border-radius: 10px;">
+            <div class="description"><b>魔女之旅 </b> 伊蕾娜 电脑壁纸图  </div>
+            <button class="download" onclick="downloadImage('https://raw.githubusercontent.com/huoshi111/huoshiwallpaper24/refs/heads/main/HUOSHI.wallpaper.image.Elaina.217.jpeg')">下载图片壁纸</button>
+        </div>
+
+        <div class="video-card" data-category="muonvzhilv" style="display: none;">
+            <img src="https://raw.githubusercontent.com/huoshi111/huoshiwallpaper24/refs/heads/main/HUOSHI.wallpaper.image.Elaina.218.jpg" alt="图片壁纸" style="width: 100%; border-radius: 10px;">
+            <div class="description"><b>魔女之旅 </b> 伊蕾娜 手机壁纸图</div>
+            <button class="download" onclick="downloadImage('https://raw.githubusercontent.com/huoshi111/huoshiwallpaper24/refs/heads/main/HUOSHI.wallpaper.image.Elaina.218.jpg')">下载图片壁纸</button>
+        </div>
+
+        <div class="video-card" data-category="muonvzhilv" style="display: none;">
+            <img src="https://raw.githubusercontent.com/huoshi111/huoshiwallpaper24/refs/heads/main/HUOSHI.wallpaper.image.Elaina.219.jpg" alt="图片壁纸" style="width: 100%; border-radius: 10px;">
+            <div class="description"><b>魔女之旅 </b> 伊蕾娜 手机壁纸图 高清</div>
+            <button class="download" onclick="downloadImage('https://raw.githubusercontent.com/huoshi111/huoshiwallpaper24/refs/heads/main/HUOSHI.wallpaper.image.Elaina.219.jpg')">下载图片壁纸</button>
+        </div>
+
+        <div class="video-card" data-category="muonvzhilv" style="display:none;">
+            <video src="https://github.com/huoshi111/huoshiwallpaper25/raw/refs/heads/main/HUOSHI.livewallpaper.Elaina.202.mp4"></video>
+            <div class="description"><b>魔女之旅 </b> 伊蕾娜 电脑动态壁纸 高清 1440p</div>
+            <button class="download" onclick="downloadVideo('https://github.com/huoshi111/huoshiwallpaper25/raw/refs/heads/main/HUOSHI.livewallpaper.Elaina.202.mp4')">下载壁纸</button>
+        </div>
+
+        <div class="video-card" data-category="muonvzhilv" style="display:none;">
+            <video src="https://github.com/huoshi111/huoshiwallpaper25/raw/refs/heads/main/HUOSHI.livewallpaper.Elaina.204.mp4"></video>
+            <div class="description"><b>魔女之旅 </b> 伊蕾娜 手机动态壁纸 1080p</div>
+            <button class="download" onclick="downloadVideo('https://github.com/huoshi111/huoshiwallpaper25/raw/refs/heads/main/HUOSHI.livewallpaper.Elaina.204.mp4')">下载壁纸</button>
+        </div>
+
+        <div class="video-card" data-category="muonvzhilv" style="display:none;">
+            <video src="https://github.com/huoshi111/huoshiwallpaper25/raw/refs/heads/main/HUOSHI.livewallpaper.Elaina.205.mp4"></video>
+            <div class="description"><b>魔女之旅 </b> 伊蕾娜 手机动态壁纸 1080p</div>
+            <button class="download" onclick="downloadVideo('https://github.com/huoshi111/huoshiwallpaper25/raw/refs/heads/main/HUOSHI.livewallpaper.Elaina.205.mp4')">下载壁纸</button>
+        </div>
+
+        <div class="video-card" data-category="muonvzhilv" style="display: none;">
+            <img src="https://raw.githubusercontent.com/huoshi111/huoshiwallpaper28/refs/heads/main/HUOSHI.wallpaper.Elaina%E5%A4%B4%E5%83%8F01.jpeg" alt="图片壁纸" style="width: 100%; border-radius: 10px;">
+            <div class="description"><b>魔女之旅 </b> 伊蕾娜 头像图 </div>
+            <button class="download" onclick="downloadImage('https://raw.githubusercontent.com/huoshi111/huoshiwallpaper28/refs/heads/main/HUOSHI.wallpaper.Elaina%E5%A4%B4%E5%83%8F01.jpeg')">下载图片壁纸</button>
+        </div>
+
+        <div class="video-card" data-category="muonvzhilv" style="display: none;">
+            <img src="https://raw.githubusercontent.com/huoshi111/huoshiwallpaper28/refs/heads/main/HUOSHI.wallpaper.Elaina%E5%A4%B4%E5%83%8F02.jpeg" alt="图片壁纸" style="width: 100%; border-radius: 10px;">
+            <div class="description"><b>魔女之旅 </b> 伊蕾娜 头像图 </div>
+            <button class="download" onclick="downloadImage('https://raw.githubusercontent.com/huoshi111/huoshiwallpaper28/refs/heads/main/HUOSHI.wallpaper.Elaina%E5%A4%B4%E5%83%8F02.jpeg')">下载图片壁纸</button>
+        </div>
+
+
 
 
 
@@ -1290,13 +1762,69 @@
             <div class="description"><b>动漫风景壁纸 雨天 城市</b> 风景 电脑壁纸图 </div>
             <button class="download" onclick="downloadImage('https://raw.githubusercontent.com/huoshi111/huoshiwallpaper23/refs/heads/main/HUOSHI.wallpaper.AnimeNight012.jpg')">下载图片壁纸</button>
         </div>
-、
+
+        <div class="video-card" data-category="city" style="display: none;">
+            <img src="https://raw.githubusercontent.com/huoshi111/huoshiwallpaper27/refs/heads/main/HUOSHI.wallpaper.Landscape%E9%9B%AA%E5%B1%B1%E9%AB%98%E6%B8%85%E5%A3%81%E7%BA%B8.jpeg" alt="图片壁纸" style="width: 100%; border-radius: 10px;">
+            <div class="description"><b>风景壁纸 雪山</b> 风景 日出 手机壁纸图 </div>
+            <button class="download" onclick="downloadImage('https://raw.githubusercontent.com/huoshi111/huoshiwallpaper27/refs/heads/main/HUOSHI.wallpaper.Landscape%E9%9B%AA%E5%B1%B1%E9%AB%98%E6%B8%85%E5%A3%81%E7%BA%B8.jpeg')">下载图片壁纸</button>
+        </div>
+
+        <div class="video-card" data-category="city" style="display: none;">
+            <img src="https://raw.githubusercontent.com/huoshi111/huoshiwallpaper27/refs/heads/main/HUOSHI.wallpaper.Landscape02%E9%9B%AA%E5%B1%B1%E9%AB%98%E6%B8%85%E5%A3%81%E7%BA%B8.jpeg" alt="图片壁纸" style="width: 100%; border-radius: 10px;">
+            <div class="description"><b>风景壁纸 雪山</b> 风景 雪山 蓝天白云 手机壁纸图 </div>
+            <button class="download" onclick="downloadImage('https://raw.githubusercontent.com/huoshi111/huoshiwallpaper27/refs/heads/main/HUOSHI.wallpaper.Landscape02%E9%9B%AA%E5%B1%B1%E9%AB%98%E6%B8%85%E5%A3%81%E7%BA%B8.jpeg')">下载图片壁纸</button>
+        </div>
+
+        <div class="video-card" data-category="city" style="display: none;">
+            <img src="https://raw.githubusercontent.com/huoshi111/huoshiwallpaper28/refs/heads/main/HUOSHI.wallpaper.Charlotte.002.png" alt="图片壁纸" style="width: 100%; border-radius: 10px;">
+            <div class="description"><b>风景壁纸 夏洛特 夜晚</b> 风景 手机壁纸图 </div>
+            <button class="download" onclick="downloadImage('https://raw.githubusercontent.com/huoshi111/huoshiwallpaper28/refs/heads/main/HUOSHI.wallpaper.Charlotte.002.png')">下载图片壁纸</button>
+        </div>
+
+        <div class="video-card" data-category="city" style="display: none;">
+            <img src="https://raw.githubusercontent.com/huoshi111/huoshiwallpaper28/refs/heads/main/HUOSHI.wallpaper.%E6%B0%9B%E5%9B%B4%E6%84%9F-%E8%A1%97%E8%BE%B9%E5%B0%8F%E5%BA%97.png" alt="图片壁纸" style="width: 100%; border-radius: 10px;">
+            <div class="description"><b>风景壁纸 街边小店 </b> 风景 电脑壁纸图 </div>
+            <button class="download" onclick="downloadImage('https://raw.githubusercontent.com/huoshi111/huoshiwallpaper28/refs/heads/main/HUOSHI.wallpaper.%E6%B0%9B%E5%9B%B4%E6%84%9F-%E8%A1%97%E8%BE%B9%E5%B0%8F%E5%BA%97.png')">下载图片壁纸</button>
+        </div>
+
+        <div class="video-card" data-category="city" style="display: none;">
+            <img src="https://raw.githubusercontent.com/huoshi111/huoshiwallpaper29/refs/heads/main/HUOSHI.wallpaper.LandscapeMountain.010.png" alt="图片壁纸" style="width: 100%; border-radius: 10px;">
+            <div class="description"><b>风景壁纸 公交站 雨天 风景 </b> 风景 电脑壁纸图 <br><br> 内存: 735.8 KB 画质: 4096 x 2304 </div>
+            <button class="download" onclick="downloadImage('https://raw.githubusercontent.com/huoshi111/huoshiwallpaper29/refs/heads/main/HUOSHI.wallpaper.LandscapeMountain.010.png')">下载图片壁纸</button>
+        </div>
+
+        <div class="video-card" data-category="city" style="display: none;">
+            <img src="https://raw.githubusercontent.com/huoshi111/huoshiwallpaper29/refs/heads/main/HUOSHI.wallpaper.Landscape%E8%A1%97%E8%BE%B9%E5%BA%97.001.png" alt="图片壁纸" style="width: 100%; border-radius: 10px;">
+            <div class="description"><b>风景壁纸 街边小店 雨天 </b> 风景 电脑壁纸图 <br><br> 内存: 725.8 KB 画质: 4096 x 3070 </div>
+            <button class="download" onclick="downloadImage('https://raw.githubusercontent.com/huoshi111/huoshiwallpaper29/refs/heads/main/HUOSHI.wallpaper.Landscape%E8%A1%97%E8%BE%B9%E5%BA%97.001.png')">下载图片壁纸</button>
+        </div>
+
+        <div class="video-card" data-category="city" style="display: none;">
+            <img src="https://raw.githubusercontent.com/huoshi111/huoshiwallpaper29/refs/heads/main/HUOSHI.wallpaper.landscape%E6%A0%91.001.png" alt="图片壁纸" style="width: 100%; border-radius: 10px;">
+            <div class="description"><b>风景壁纸 火车站 </b> 风景 电脑壁纸图 <br><br> 内存: 4.6 MB 画质: 4096 x 3070 </div>
+            <button class="download" onclick="downloadImage('https://raw.githubusercontent.com/huoshi111/huoshiwallpaper29/refs/heads/main/HUOSHI.wallpaper.landscape%E6%A0%91.001.png')">下载图片壁纸</button>
+        </div>
+
+        <div class="video-card" data-category="city" style="display: none;">
+            <img src="https://raw.githubusercontent.com/huoshi111/huoshiwallpaper30/refs/heads/main/HUOSHI.wallpaper.Kimi.no.Na.wa%E4%BD%A0%E7%9A%84%E5%90%8D%E5%AD%9702.png" alt="图片壁纸" style="width: 100%; border-radius: 10px;">
+            <div class="description"><b>你的名字 风景</b> 你的名字 手机壁纸图 <br><br> 内存: 2.2 MB 画质: 912 x 1459 </div>
+            <button class="download" onclick="downloadImage('https://raw.githubusercontent.com/huoshi111/huoshiwallpaper30/refs/heads/main/HUOSHI.wallpaper.Kimi.no.Na.wa%E4%BD%A0%E7%9A%84%E5%90%8D%E5%AD%9702.png')">下载图片壁纸</button>
+        </div>
+
+        <div class="video-card" data-category="city" style="display: none;">
+            <img src="https://raw.githubusercontent.com/huoshi111/huoshiwallpaper30/refs/heads/main/HUOSHI.wallpaper.%E5%9F%8E%E5%B8%82%E9%A3%8E%E6%99%AFCityLandscape.png" alt="图片壁纸" style="width: 100%; border-radius: 10px;">
+            <div class="description"><b>流星 日出 城市 风景</b> 流星 星空 电脑壁纸图 <br><br> 内存: 4.3 MB 画质: 2560 x 1440 </div>
+            <button class="download" onclick="downloadImage('https://raw.githubusercontent.com/huoshi111/huoshiwallpaper30/refs/heads/main/HUOSHI.wallpaper.%E5%9F%8E%E5%B8%82%E9%A3%8E%E6%99%AFCityLandscape.png')">下载图片壁纸</button>
+        </div>
+
+
 
 
 
 
 
 <!--原神壁纸-->
+
         <div class="video-card" data-category="yuanshen" style="display:none;">
             <video src="https://github.com/huoshi111/huoshiwallpaper03/raw/refs/heads/main/kleewallpaper.mp4"></video>
             <div class="description">原神 可莉 Klee - Secret Summer Paradise  动态壁纸</div>
@@ -1313,6 +1841,12 @@
             <video src="https://github.com/huoshi111/huoshiwallpaper03/raw/refs/heads/main/Genshin%20Impact%20-%20Klee.mp4" muted autoplay controls></video>
             <div class="description">原神 可莉 画画 动态壁纸</div>
             <button class="download" onclick="downloadVideo('https://github.com/huoshi111/huoshiwallpaper03/raw/refs/heads/main/Genshin%20Impact%20-%20Klee.mp4')">下载壁纸</button>
+        </div>
+
+        <div class="video-card" data-category="yuanshen" style="display: none;">
+            <img src="https://github.com/huoshi111/huoshiwallpaper29/blob/main/HUOSHI.wallpaper.GenshinImpact.%E8%83%A1%E6%A1%83.1.png?raw=true" alt="图片壁纸" style="width: 100%; border-radius: 10px;">
+            <div class="description"><b>原神 胡桃 </b> 电脑壁纸图 <br><br> 内存 6988 KB  画质: 4096 x 1524 </div>
+            <button class="download" onclick="downloadImage('https://i.ibb.co/6BcHZ9X/HUOSHI-wallpaper-Genshin-Impact-1.png')">下载图片壁纸</button>
         </div>
 
         <div class="video-card" data-category="yuanshen" style="display: none;">
@@ -1355,6 +1889,48 @@
             <img src="https://github.com/huoshi111/huoshiwallpaper19/blob/main/HUOSHI-wallpaper-Genshin-Impact-Image-Yuanshen-01.png?raw=true" alt="图片壁纸" style="width: 100%; border-radius: 10px;">
             <div class="description"><b>原神 </b> 超高清壁纸图 </div>
             <button class="download" onclick="downloadImage('https://i.ibb.co/4P7CZ4L/HUOSHI-wallpaper-Genshin-Impact-Image-Yuanshen-01.png')">下载图片壁纸</button>
+        </div>
+
+        <div class="video-card" data-category="yuanshen" style="display: none;">
+            <img src="https://github.com/huoshi111/huoshiwallpaper28/blob/main/HUOSHI.wallpaper.GenshinImpact%E5%AE%B5%E5%AE%AB004.jpeg?raw=true" alt="图片壁纸" style="width: 100%; border-radius: 10px;">
+            <div class="description"><b>原神 宵宫</b> 宵宫 高清电脑壁纸图 </div>
+            <button class="download" onclick="downloadImage('https://i.ibb.co/dfQCgdD/HUOSHI-wallpaper-Genshin-Impact-004.jpg')">下载图片壁纸</button>
+        </div>
+
+        <div class="video-card" data-category="yuanshen" style="display: none;">
+            <img src="https://raw.githubusercontent.com/huoshi111/huoshiwallpaper28/refs/heads/main/HUOSHI.wallpaper.GenshinImpact%E5%AE%B5%E5%AE%AB005.jpg" alt="图片壁纸" style="width: 100%; border-radius: 10px;">
+            <div class="description"><b>原神 宵宫</b> 宵宫 雪 高清手机壁纸图 </div>
+            <button class="download" onclick="downloadImage('https://raw.githubusercontent.com/huoshi111/huoshiwallpaper28/refs/heads/main/HUOSHI.wallpaper.GenshinImpact%E5%AE%B5%E5%AE%AB005.jpg')">下载图片壁纸</button>
+        </div>
+
+        <div class="video-card" data-category="yuanshen" style="display: none;">
+            <img src="https://raw.githubusercontent.com/huoshi111/huoshiwallpaper28/refs/heads/main/HUOSHI.wallpaper.GenshinImpact%E5%AE%B5%E5%AE%AB006.jpg" alt="图片壁纸" style="width: 100%; border-radius: 10px;">
+            <div class="description"><b>原神 宵宫</b>宵宫 高清电脑壁纸图 </div>
+            <button class="download" onclick="downloadImage('https://raw.githubusercontent.com/huoshi111/huoshiwallpaper28/refs/heads/main/HUOSHI.wallpaper.GenshinImpact%E5%AE%B5%E5%AE%AB006.jpg')">下载图片壁纸</button>
+        </div>
+
+        <div class="video-card" data-category="yuanshen" style="display: none;">
+            <img src="https://raw.githubusercontent.com/huoshi111/huoshiwallpaper28/refs/heads/main/HUOSHI.wallpaper.GenshinImpact%E5%AE%B5%E5%AE%AB007.jpg" alt="图片壁纸" style="width: 100%; border-radius: 10px;">
+            <div class="description"><b>原神 宵宫</b>宵宫 有水印 高清电脑壁纸图 </div>
+            <button class="download" onclick="downloadImage('https://raw.githubusercontent.com/huoshi111/huoshiwallpaper28/refs/heads/main/HUOSHI.wallpaper.GenshinImpact%E5%AE%B5%E5%AE%AB007.jpg')">下载图片壁纸</button>
+        </div>
+
+        <div class="video-card" data-category="yuanshen" style="display: none;">
+            <img src="https://github.com/huoshi111/huoshiwallpaper29/blob/main/HUOSHI.wallpaper.GenshinImpact%E5%AE%B5%E5%AE%AB001.jpg?raw=true" alt="图片壁纸" style="width: 100%; border-radius: 10px;">
+            <div class="description"><b>原神 宵宫</b> 电脑壁纸图 <br><br> 内存 8 MB  画质: 4096 x 2304 </div>
+            <button class="download" onclick="downloadImage('https://i.ibb.co/ZNVttgb/HUOSHI-wallpaper-Genshin-Impact-001.jpg')">下载图片壁纸</button>
+        </div>
+
+        <div class="video-card" data-category="yuanshen" style="display: none;">
+            <img src="https://raw.githubusercontent.com/huoshi111/huoshiwallpaper29/refs/heads/main/HUOSHI.wallpaper.GenshinImpact%E5%AE%B5%E5%AE%AB002.jpg" alt="图片壁纸" style="width: 100%; border-radius: 10px;">
+            <div class="description"><b>原神 宵宫</b> 电脑壁纸图 <br><br> 内存 301.7 KB  画质: 1700 x 1108 </div>
+            <button class="download" onclick="downloadImage('https://raw.githubusercontent.com/huoshi111/huoshiwallpaper29/refs/heads/main/HUOSHI.wallpaper.GenshinImpact%E5%AE%B5%E5%AE%AB002.jpg')">下载图片壁纸</button>
+        </div>
+
+        <div class="video-card" data-category="yuanshen" style="display: none;">
+            <img src="https://raw.githubusercontent.com/huoshi111/huoshiwallpaper29/refs/heads/main/HUOSHI.wallpaper.GenshinImpact%E5%AE%B5%E5%AE%AB003.jpg" alt="图片壁纸" style="width: 100%; border-radius: 10px;">
+            <div class="description"><b>原神 宵宫</b> 电脑壁纸图 <br><br> 内存 298 KB  画质: 1800 x 1000 </div>
+            <button class="download" onclick="downloadImage('https://raw.githubusercontent.com/huoshi111/huoshiwallpaper29/refs/heads/main/HUOSHI.wallpaper.GenshinImpact%E5%AE%B5%E5%AE%AB003.jpg')">下载图片壁纸</button>
         </div>
 
 
@@ -1498,25 +2074,42 @@ function closeModal() {
 }
 
 // ❓ **特殊问题模态框**
-const questionButton = document.querySelector('#unique-question-button-id');
-const modalOverlay = document.querySelector('#unique-modal-overlay-id');
-const closeButton = document.querySelector('#unique-close-button-id');
+        // 获取必要元素
+        const questionButton1 = document.querySelector('#unique-question-button-id1');
+        const modalOverlay1 = document.querySelector('#unique-modal-overlay-id1');
+        const modal1 = document.querySelector('#unique-modal-id1');
+        const closeButton1 = document.querySelector('#unique-close-button-id1');
+        const categoryButtons1 = document.querySelectorAll('.category-btn1');
+        const contentAreas1 = document.querySelectorAll('.content1');
 
-if (questionButton && modalOverlay && closeButton) {
-    questionButton.addEventListener('click', () => {
-        modalOverlay.style.display = 'flex';    
-    });
+        // 打开模态框
+        questionButton1.addEventListener('click', () => {
+            modalOverlay1.style.display = 'flex';
+        });
 
-    closeButton.addEventListener('click', () => {
-        modalOverlay.style.display = 'none';
-    });
+        // 关闭模态框
+        closeButton1.addEventListener('click', () => {
+            modalOverlay1.style.display = 'none';
+        });
 
-    modalOverlay.addEventListener('click', (e) => {
-        if (e.target === modalOverlay) {
-            modalOverlay.style.display = 'none';
-        }
-    });
-}
+        modalOverlay1.addEventListener('click', (e) => {
+            if (e.target === modalOverlay1) {
+                modalOverlay1.style.display = 'none';
+            }
+        });
+
+        // 切换内容区域
+        categoryButtons1.forEach(button => {
+            button.addEventListener('click', () => {
+                const targetContent = button.getAttribute('data-target');
+                contentAreas1.forEach(content => {
+                    content.classList.toggle('active', content.id === targetContent);
+                });
+                categoryButtons1.forEach(btn => {
+                    btn.classList.toggle('active', btn === button);
+                });
+            });
+        });
 
 // 🛡️ **全局容错机制**（可选）
 document.addEventListener('DOMContentLoaded', () => {
